@@ -17,6 +17,7 @@ function! Tads3Indent()
   " Increase indent after a line ending with '{', ':', or '['
   if prevline =~ '{\s*$' || prevline =~ ':\s*$' || prevline =~ '\[\s*$'
     let indentlevel += &shiftwidth
+    return indentlevel
   endif
   
   " Decrease indent for lines starting with '}' or ']'

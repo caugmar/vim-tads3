@@ -258,6 +258,7 @@ syn keyword tadsMethod topicResponse touchPresence touchSize travelDesc
 syn keyword tadsMethod triggerEvent up useSpecialDesc verbPhrase verify
 syn keyword tadsMethod version vocabLikelihood vocabWords vocabWords
 syn keyword tadsMethod weakTokens weight west
+syn keyword tadsMethod setAboutBox showGoodBye
 
 hi def link tadsClassName Identifier
 hi def link tadsMethod Function
