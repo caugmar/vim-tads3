@@ -170,7 +170,7 @@ syn keyword tadsClassName Search SenseConnector SenseDaemon
 syn keyword tadsClassName ShuffledEventList Smell SpecialTopic StopEventList
 syn keyword tadsClassName SuggestedAskTopic Surface Take Thing TravelMessage
 syn keyword tadsClassName TravelVia TurnOn Up Vector VerbRule YesTopic
-syn keyword tadsClassName DeadEndConnector
+syn keyword tadsClassName DeadEndConnector ThroughPassage 
 
 syn keyword tadsConstant adventium defaultCeiling defaultEastWall
 syn keyword tadsConstant defaultFloor defaultNorthWall defaultSky

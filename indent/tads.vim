@@ -29,6 +29,13 @@ function! Tads3Indent()
   " Increase indent after object or class definitions identified by ' : ' but not preceded by '?'
   if (prevline =~ '\s:\s' || prevline =~ ':\s') && prevline !~ '\?'
     let indentlevel += &shiftwidth
+    return indentlevel
+  endif
+
+  " Increase indent after a line starting with '+'
+  if prevline =~ '^\+'
+    let indentlevel += &shiftwidth
+    return indentlevel
   endif
 
   " Return the computed indentation level
