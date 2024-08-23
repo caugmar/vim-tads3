@@ -11,7 +11,7 @@ if exists("b:current_syntax")
 endif
 
 " A bunch of useful keywords
-syn keyword tadsStatement	goto break return continue pass try finally
+syn keyword tadsStatement	goto break return continue pass try finally new function
 syn keyword tadsLabel		case default
 syn keyword tadsConditional	if else end switch
 syn keyword tadsRepeat		while for do foreach
@@ -258,8 +258,8 @@ syn keyword tadsMethod theName theName theNamePossNoun toList
 syn keyword tadsMethod topicResponse touchPresence touchSize travelDesc
 syn keyword tadsMethod triggerEvent up useSpecialDesc verbPhrase verify
 syn keyword tadsMethod version vocabLikelihood vocabWords vocabWords
-syn keyword tadsMethod weakTokens weight west
-syn keyword tadsMethod setAboutBox showGoodBye
+syn keyword tadsMethod weakTokens weight west eventList
+syn keyword tadsMethod setAboutBox showGoodBye noteTraversal
 
 hi def link tadsClassName Identifier
 hi def link tadsMethod Function

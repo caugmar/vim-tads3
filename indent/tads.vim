@@ -14,7 +14,7 @@ function! Tads3Indent()
   " Start with the same indentation as the previous line
   let indentlevel = indent(lnum - 1)
   
-  " Increase indent after a line ending with '{', ':', or '['
+  " Increase indent after a line ending with '{' or '['
   if prevline =~ '{\s*$' || prevline =~ '\[\s*$'
     let indentlevel += &shiftwidth
     return indentlevel
@@ -26,11 +26,11 @@ function! Tads3Indent()
     return indentlevel >= 0 ? indentlevel : 0
   endif
   
-  " Increase indent after object or class definitions identified by ' : '
-  if prevline =~ '\s:\s' || prevline =~ ':\s' 
+  " Increase indent after object or class definitions identified by ' : ' but not preceded by '?'
+  if (prevline =~ '\s:\s' || prevline =~ ':\s') && prevline !~ '\?\s*:\s'
     let indentlevel += &shiftwidth
   endif
-  
+
   " Return the computed indentation level
   return indentlevel
 endfunction
