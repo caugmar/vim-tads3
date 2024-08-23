@@ -33,7 +33,7 @@ function! Tads3Indent()
   endif
 
   " Increase indent after a line starting with '+'
-  if prevline =~ '^\+'
+  if prevline =~ '^\+' && indentlevel == 0
     let indentlevel += &shiftwidth
   endif
 
