@@ -22,7 +22,7 @@ function! Tads3Indent()
 
   " Increase indent after a line starting with '+' (object inside
   " another object.)
-  if prevline =~ '^\+'
+  if prevline =~ '^\+\s*'
     let indentlevel += &shiftwidth
     return indentlevel
   endif
