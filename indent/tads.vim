@@ -27,7 +27,7 @@ function! Tads3Indent()
   endif
   
   " Increase indent after object or class definitions identified by ' : ' but not preceded by '?'
-  if (prevline =~ '\s:\s' || prevline =~ ':\s') && prevline !~ '\?\s*:\s'
+  if (prevline =~ '\s:\s' || prevline =~ ':\s') && prevline !~ '\s\?\s'
     let indentlevel += &shiftwidth
   endif
 
