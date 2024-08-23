@@ -20,13 +20,6 @@ function! Tads3Indent()
     return indentlevel
   endif
 
-  " Increase indent after a line starting with '+' (object inside
-  " another object.)
-  if prevline =~ '^\+\s*'
-    let indentlevel += &shiftwidth
-    return indentlevel
-  endif
-
   " Decrease indent for lines starting with '}' or ']' or ';'
   if line =~ '^\s*[}\];]'
     let indentlevel -= &shiftwidth
