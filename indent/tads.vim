@@ -20,8 +20,8 @@ function! Tads3Indent()
     return indentlevel
   endif
   
-  " Decrease indent for lines starting with '}' or ']'
-  if line =~ '^\s*[}\]]'
+  " Decrease indent for lines starting with '}' or ']' or ';'
+  if line =~ '^\s*[}\];]'
     let indentlevel -= &shiftwidth
     return indentlevel >= 0 ? indentlevel : 0
   endif
