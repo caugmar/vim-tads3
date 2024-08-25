@@ -32,12 +32,6 @@ function! Tads3Indent()
     return indentlevel
   endif
 
-  " Increase indent if the previous line starts with '+' and no other rules apply
-  if prevline =~ '^\+'
-    let indentlevel += &shiftwidth
-    return indentlevel
-  endif
-
   " Return the computed indentation level
   return indentlevel
 endfunction
