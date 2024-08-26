@@ -26,6 +26,12 @@ function! Tads3Indent()
     return indentlevel >= 0 ? indentlevel : 0
   endif
   
+  " Increase indent after VerbRule
+  if (prevline =~ '\sVerbRule\s*')
+    let indentlevel += &shiftwidth
+    return indentlevel
+  endif
+
   " Increase indent after object or class definitions identified by ' : ' but not preceded by '?'
   if (prevline =~ '\s:\s' || prevline =~ ':\s') && prevline !~ '\?'
     let indentlevel += &shiftwidth
