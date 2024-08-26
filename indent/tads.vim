@@ -45,13 +45,13 @@ function! Tads3Indent()
   endif
 
   " Increase indent after Thing
-  if (prevline =~ '\sThing\s')
+  if (prevline =~ '\sThing\s*')
     let indentlevel += &shiftwidth
     return indentlevel
   endif
 
   " Increase indent after InstructionsAction
-  if (prevline =~ '\sInstructionsAction\s')
+  if (prevline =~ '\sInstructionsAction\s*')
     let indentlevel += &shiftwidth
     return indentlevel
   endif
