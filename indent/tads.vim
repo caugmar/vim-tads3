@@ -38,8 +38,14 @@ function! Tads3Indent()
     return indentlevel
   endif
 
-  " Increase indent after ThroughPassage
+  " Increase indent after Decoration
   if (prevline =~ '\sDecoration\s')
+    let indentlevel += &shiftwidth
+    return indentlevel
+  endif
+
+  " Increase indent after modify
+  if (prevline =~ '^\modify\s')
     let indentlevel += &shiftwidth
     return indentlevel
   endif
