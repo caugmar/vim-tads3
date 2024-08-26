@@ -50,6 +50,12 @@ function! Tads3Indent()
     return indentlevel
   endif
 
+  " Increase indent after Thing
+  if (prevline =~ '\sActor\s*')
+    let indentlevel += &shiftwidth
+    return indentlevel
+  endif
+
   " Increase indent after InstructionsAction
   if (prevline =~ '\sInstructionsAction\s*')
     let indentlevel += &shiftwidth
