@@ -32,6 +32,12 @@ function! Tads3Indent()
     return indentlevel
   endif
 
+  " Increase indent after ThroughPassage
+  if (prevline =~ '\sThroughPassage\s')
+    let indentlevel += &shiftwidth
+    return indentlevel
+  endif
+
   " Return the computed indentation level
   return indentlevel
 endfunction
