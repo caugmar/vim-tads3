@@ -27,7 +27,7 @@ function! Tads3Indent()
   endif
   
   " Increase indent after VerbRule
-  if (prevline =~ '\sVerbRule\s*')
+  if (prevline =~ '\sVerbRule(.*')
     let indentlevel += &shiftwidth
     return indentlevel
   endif
