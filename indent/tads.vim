@@ -45,7 +45,7 @@ function! Tads3Indent()
   endif
 
   " Increase indent after modify
-  if (prevline =~ '^\modify\s')
+  if (prevline =~ '\smodify\s')
     let indentlevel += &shiftwidth
     return indentlevel
   endif
